@@ -1,37 +1,38 @@
-	// Создание класса - лучник
+	// Г‘Г®Г§Г¤Г Г­ГЁГҐ ГЄГ«Г Г±Г±Г  - Г«ГіГ·Г­ГЁГЄ
 	#ifndef CLASS_H_
 	#define CLASS_H_
 	class Monstr;
+test
 	class Archer
 		{
 			private:
 				int hitpoints, manapoints, damage, defence;
-				static const int NAMESIZE = 3; // объявление статического компонента - константного значения количества имён лучников
+				static const int NAMESIZE = 3; // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ Г±ГІГ ГІГЁГ·ГҐГ±ГЄГ®ГЈГ® ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГ  - ГЄГ®Г­Г±ГІГ Г­ГІГ­Г®ГЈГ® Г§Г­Г Г·ГҐГ­ГЁГї ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЁГ¬ВёГ­ Г«ГіГ·Г­ГЁГЄГ®Гў
 			public:
-				static const string name[]; // объявление статического компонента - имени лучника
-				Archer (int hitpoints, int manapoints, int damage, int defence); // объявление конструктора характеристик лучника с использованием this
-				Archer (bool specialisation); // объявление конструктора специализации лучника
-				Archer (string color_of_cloak, int number_of_cloak); // объявление конструктора цвета и номера плаща лучника
-				Archer() // конструктор первичных харатеристик лучника, по-умолчанию
+				static const string name[]; // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ Г±ГІГ ГІГЁГ·ГҐГ±ГЄГ®ГЈГ® ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГ  - ГЁГ¬ГҐГ­ГЁ Г«ГіГ·Г­ГЁГЄГ 
+				Archer (int hitpoints, int manapoints, int damage, int defence); // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г  ГµГ Г°Г ГЄГІГҐГ°ГЁГ±ГІГЁГЄ Г«ГіГ·Г­ГЁГЄГ  Г± ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ Г­ГЁГҐГ¬ this
+				Archer (bool specialisation); // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г  Г±ГЇГҐГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГЁ Г«ГіГ·Г­ГЁГЄГ 
+				Archer (string color_of_cloak, int number_of_cloak); // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°Г  Г¶ГўГҐГІГ  ГЁ Г­Г®Г¬ГҐГ°Г  ГЇГ«Г Г№Г  Г«ГіГ·Г­ГЁГЄГ 
+				Archer() // ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГҐГ°ГўГЁГ·Г­Г»Гµ ГµГ Г°Г ГІГҐГ°ГЁГ±ГІГЁГЄ Г«ГіГ·Г­ГЁГЄГ , ГЇГ®-ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
 					{
 						hitpoints = 0;
 						manapoints = 0;
 						damage = 0;
 						defence = 0;
 					}
-				~Archer() // объявление деструктора по-умолчанию
+				~Archer() // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°Г  ГЇГ®-ГіГ¬Г®Г«Г·Г Г­ГЁГѕ
 					{
-						cout << "*\n"; // вывод на экран символа *, если был использован деструктор
+						cout << "*\n"; // ГўГ»ГўГ®Г¤ Г­Г  ГЅГЄГ°Г Г­ Г±ГЁГ¬ГўГ®Г«Г  *, ГҐГ±Г«ГЁ ГЎГ»Г« ГЁГ±ГЇГ®Г«ГјГ§Г®ГўГ Г­ Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°
 					}
-				void bow (const int ARROWS); // объявление метода выстрелов из лука
-				void buff (char orientation_buff, string name_buff, string effect_buff); // метод перечисления наложенных бафов
-				void show (); // метод вывода информации о характеристиках лучника на экран
-				friend void dead_archer (const Archer &name); // объявление дружественной функции
+				void bow (const int ARROWS); // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ Г¬ГҐГІГ®Г¤Г  ГўГ»Г±ГІГ°ГҐГ«Г®Гў ГЁГ§ Г«ГіГЄГ 
+				void buff (char orientation_buff, string name_buff, string effect_buff); // Г¬ГҐГІГ®Г¤ ГЇГҐГ°ГҐГ·ГЁГ±Г«ГҐГ­ГЁГї Г­Г Г«Г®Г¦ГҐГ­Г­Г»Гµ ГЎГ ГґГ®Гў
+				void show (); // Г¬ГҐГІГ®Г¤ ГўГ»ГўГ®Г¤Г  ГЁГ­ГґГ®Г°Г¬Г Г¶ГЁГЁ Г® ГµГ Г°Г ГЄГІГҐГ°ГЁГ±ГІГЁГЄГ Гµ Г«ГіГ·Г­ГЁГЄГ  Г­Г  ГЅГЄГ°Г Г­
+				friend void dead_archer (const Archer &name); // Г®ГЎГєГїГўГ«ГҐГ­ГЁГҐ Г¤Г°ГіГ¦ГҐГ±ГІГўГҐГ­Г­Г®Г© ГґГіГ­ГЄГ¶ГЁГЁ
 		};
-	void dead_archer (const Archer &name) // инициализация дружественной функции
+	void dead_archer (const Archer &name) // ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї Г¤Г°ГіГ¦ГҐГ±ГІГўГҐГ­Г­Г®Г© ГґГіГ­ГЄГ¶ГЁГЁ
 		{
 			cout << "\n\t\t\t\t  The lifetime of the archer is over. Archer is dead. You characteristics:\n\t\t\t\tHP: " << name.hitpoints 
 			     << "\n\t\t\t\tMP: " << name.manapoints << "\n\t\t\t\tDMG: " << name.damage << "\n\t\t\t\tDEF: " << name.defence << endl;
 		}
-	const string Archer::name[NAMESIZE] = {"Shiro", "Robin", "Parys"}; // инициализация статического компонента - имён лучников
+	const string Archer::name[NAMESIZE] = {"Shiro", "Robin", "Parys"}; // ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї Г±ГІГ ГІГЁГ·ГҐГ±ГЄГ®ГЈГ® ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГ  - ГЁГ¬ВёГ­ Г«ГіГ·Г­ГЁГЄГ®Гў
 	#endif
