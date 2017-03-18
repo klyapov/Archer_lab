@@ -1,14 +1,14 @@
-	//Описание конструкторов
+	//РћРїРёСЃР°РЅРёРµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂРѕРІ
 	#ifndef CONSTRUCTOR_H_
 	#define CONSTRUCTOR_H_
-		Archer::Archer(int hitpoints, int manapoints, int damage, int defence) // конструктор характеристик лучника с использованием указателя this
+		Archer::Archer(int hitpoints, int manapoints, int damage, int defence) // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє Р»СѓС‡РЅРёРєР° СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СѓРєР°Р·Р°С‚РµР»СЏ this
 			{
 				this -> hitpoints = hitpoints; 
 				this -> manapoints = manapoints; 
 				this -> damage = damage;
 				this -> defence = defence;
 			} 
-		Archer::Archer(bool specialization) // конструктор специализации лучника
+		Archer::Archer(bool specialization) // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃРїРµС†РёР°Р»РёР·Р°С†РёРё Р»СѓС‡РЅРёРєР°
 			{
 				int profession;
 				srand(time(0));
@@ -68,7 +68,7 @@
 							}
 					}
 			}
-		Archer::Archer(string color_of_cloak, int number_of_cloak) // конструктор цвета и номера плаща лучника 
+		Archer::Archer(string color_of_cloak, int number_of_cloak) // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ С†РІРµС‚Р° Рё РЅРѕРјРµСЂР° РїР»Р°С‰Р° Р»СѓС‡РЅРёРєР° 
 			{
 				cout << "\t\t\t\tYou color of cloak - " << '"' << color_of_cloak << '"' << " with number " << '"' << number_of_cloak << '"' << endl;
 			}
