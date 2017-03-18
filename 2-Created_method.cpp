@@ -1,7 +1,7 @@
-	// Описание методов
+	// РћРїРёСЃР°РЅРёРµ РјРµС‚РѕРґРѕРІ
 	#ifndef METHOD_H_
 	#define METHOD_H_
-	void Archer::bow (const int ARROWS) // метод выстрелов из лука
+	void Archer::bow (const int ARROWS) // РјРµС‚РѕРґ РІС‹СЃС‚СЂРµР»РѕРІ РёР· Р»СѓРєР°
 		{
 			int randomShot[ARROWS];
 			srand(time(0));
@@ -19,7 +19,7 @@
 							}
 				}		
 		}
-	void Archer::buff(char orientation_buff, string name_buff, string effect_buff) // метод перечисления наложеных бафов
+	void Archer::buff(char orientation_buff, string name_buff, string effect_buff) // РјРµС‚РѕРґ РїРµСЂРµС‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕР¶РµРЅС‹С… Р±Р°С„РѕРІ
 		{
 			cout << "\t\t\t\t\t\t\t\t\tOrientation buff - p(positive) or n(negative): ";
 			cin >> orientation_buff;
@@ -39,7 +39,7 @@
 				}
 			else cout << endl;
 		}
-	void Archer::show() // метод вывода информации на экран
+	void Archer::show() // РјРµС‚РѕРґ РІС‹РІРѕРґР° РёРЅС„РѕСЂРјР°С†РёРё РЅР° СЌРєСЂР°РЅ
 		{
 			cout << "\t\t\t\tHP: " << hitpoints << "\n\t\t\t\tMP: " << manapoints << "\n\t\t\t\tDMG: " << damage << "\n\t\t\t\tDEF: " << defence << endl << endl;
 		}
