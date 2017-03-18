@@ -2,7 +2,6 @@
 	#ifndef CLASS_H_
 	#define CLASS_H_
 	class Monstr;
-test
 	class Archer
 		{
 			private:
