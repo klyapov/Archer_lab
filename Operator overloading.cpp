@@ -14,7 +14,7 @@
 					{
 						this -> number_one = number_one;
 					}
-				reload operator^(const reload & r) const // перегрузка оператора ^, возведение в степень
+				reload operator^(const reload & r) const // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° ^, РІРѕР·РІРµРґРµРЅРёРµ РІ СЃС‚РµРїРµРЅСЊ
 					{
 						reload result;
 						result.number_one = 1;
@@ -24,19 +24,19 @@
 							}
 						return result; 
 					}
-				reload operator%(const reload & r) const // перегрузка оператора %, остаток от деления
+				reload operator%(const reload & r) const // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° %, РѕСЃС‚Р°С‚РѕРє РѕС‚ РґРµР»РµРЅРёСЏ
 					{
 						reload result;
 						result.number_one = number_one % r.number_one;
 						return result;
 					}
-				reload operator<<(const reload & r) const // перегрузка оператора <<, сдвиг влево
+				reload operator<<(const reload & r) const // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° <<, СЃРґРІРёРі РІРїСЂР°РІРѕ
 					{
 						reload result;
 						result.number_one = number_one << r.number_one;
 						return result;
 					}
-				void Show() // метод вывода на экран
+				void Show() // РјРµС‚РѕРґ РІС‹РІРѕРґР° РЅР° СЌРєСЂР°РЅ
 					{
 						cout << number_one; 
 					}
@@ -58,7 +58,7 @@
 			
 			reload test_one;
 			cout << endl; 
-			test_one = first ^ second; // перегрузка оператора ^, нотация с операцией 
+			test_one = first ^ second; // РїРµСЂРµРіСЂСѓР·Р° РѕРїРµСЂР°С‚РѕСЂР° ^, РЅРѕС‚Р°С†РёСЏ СЃ РѕРїРµСЂР°С†РёРµР№
 			first.Show();
 			cout << " ^ ";
 			second.Show();
@@ -67,7 +67,7 @@
 			 
 			reload test_two;
 			cout << endl;
-			test_two = first.operator%(second); // перегрузка оператора %, нотация с функцией
+			test_two = first.operator%(second); // РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° %, РЅРѕС‚Р°С†РёСЏ СЃ С„СѓРЅРєС†РёРµР№
 			first.Show();
 			cout << " % ";
 			second.Show();
@@ -76,7 +76,7 @@
 			
 			reload test_three;
 			cout << endl;
-			test_three = third << second; // перегрузка оператора <<, нотация с операцией
+			test_three = third << second; // РїРµСЂРµРіСЂСѓР·Р° РѕРїРµСЂР°С‚РѕСЂР° <<, РЅРѕС‚Р°С†РёСЏ СЃ РѕРїРµСЂР°С†РёРµР№
 			third.Show();
 			cout << " << ";
 			second.Show();
