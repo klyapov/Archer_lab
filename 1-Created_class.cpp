@@ -1,37 +1,71 @@
-	// РЎРѕР·РґР°РЅРёРµ РєР»Р°СЃСЃР° - Р»СѓС‡РЅРёРє
+	// Создание класса
 	#ifndef CLASS_H_
 	#define CLASS_H_
-	class Monstr;
-	class Archer
+	class archer
 		{
 			private:
 				int hitpoints, manapoints, damage, defence;
-				static const int NAMESIZE = 3; // РѕР±СЉСЏРІР»РµРЅРёРµ СЃС‚Р°С‚РёС‡РµСЃРєРѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р° - РєРѕРЅСЃС‚Р°РЅС‚РЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° РёРјС‘РЅ Р»СѓС‡РЅРёРєРѕРІ
+				static const int NAMESIZE = 3; // объявление статического компонента - константного значения количества имён лучников
+				int tension_force_of_bow;
 			public:
-				static const string name[]; // РѕР±СЉСЏРІР»РµРЅРёРµ СЃС‚Р°С‚РёС‡РµСЃРєРѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р° - РёРјРµРЅРё Р»СѓС‡РЅРёРєР°
-				Archer (int hitpoints, int manapoints, int damage, int defence); // РѕР±СЉСЏРІР»РµРЅРёРµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє Р»СѓС‡РЅРёРєР° СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј this
-				Archer (bool specialisation); // РѕР±СЉСЏРІР»РµРЅРёРµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° СЃРїРµС†РёР°Р»РёР·Р°С†РёРё Р»СѓС‡РЅРёРєР°
-				Archer (string color_of_cloak, int number_of_cloak); // РѕР±СЉСЏРІР»РµРЅРёРµ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂР° С†РІРµС‚Р° Рё РЅРѕРјРµСЂР° РїР»Р°С‰Р° Р»СѓС‡РЅРёРєР°
-				Archer() // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРµСЂРІРёС‡РЅС‹С… С…Р°СЂР°С‚РµСЂРёСЃС‚РёРє Р»СѓС‡РЅРёРєР°, РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
+				static const string name[]; // объявление статического компонента - имени лучника
+				archer (int hitpoints, int manapoints, int damage, int defence); // объявление конструктора характеристик лучника с использованием this
+				archer (bool specialisation); // объявление конструктора специализации лучника
+				archer (string color_of_cloak, int number_of_cloak); // объявление конструктора цвета и номера плаща лучника
+				archer () // конструктор первичных харатеристик лучника, по-умолчанию
 					{
 						hitpoints = 0;
 						manapoints = 0;
 						damage = 0;
 						defence = 0;
 					}
-				~Archer() // РѕР±СЉСЏРІР»РµРЅРёРµ РґРµСЃС‚СЂСѓРєС‚РѕСЂР° РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
+				~archer() // объявление деструктора по-умолчанию
 					{
-						cout << "*\n"; // РІС‹РІРѕРґ РЅР° СЌРєСЂР°РЅ СЃРёРјРІРѕР»Р° *, РµСЃР»Рё Р±С‹Р» РёСЃРїРѕР»СЊР·РѕРІР°РЅ РґРµСЃС‚СЂСѓРєС‚РѕСЂ
+						cout << "*\n"; // вывод на экран символа *, если был использован деструктор
 					}
-				void bow (const int ARROWS); // РѕР±СЉСЏРІР»РµРЅРёРµ РјРµС‚РѕРґР° РІС‹СЃС‚СЂРµР»РѕРІ РёР· Р»СѓРєР°
-				void buff (char orientation_buff, string name_buff, string effect_buff); // РјРµС‚РѕРґ РїРµСЂРµС‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕР¶РµРЅРЅС‹С… Р±Р°С„РѕРІ
-				void show (); // РјРµС‚РѕРґ РІС‹РІРѕРґР° РёРЅС„РѕСЂРјР°С†РёРё Рѕ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°С… Р»СѓС‡РЅРёРєР° РЅР° СЌРєСЂР°РЅ
-				friend void dead_archer (const Archer &name); // РѕР±СЉСЏРІР»РµРЅРёРµ РґСЂСѓР¶РµСЃС‚РІРµРЅРЅРѕР№ С„СѓРЅРєС†РёРё
+				void bow (const int ARROWS); // объявление метода выстрелов из лука
+				void buff (char orientation_buff, string name_buff, string effect_buff); // метод перечисления наложенных бафов
+				void show (); // метод вывода информации о характеристиках лучника на экран
+				friend void dead_archer (const archer &name); // объявление дружественной функции
+				virtual void tension_force () // виртуальный метод, позднее связывание
+					{
+						cout << "Primary tension force of bow: " << tension_force_of_bow << "N\n";
+					}
+				struct bow_type // объявление вложенного класса(структуры)
+					{
+						bow_type (string type) // объявление конструктора 
+							{
+								cout << "\t\t\t\tA type Your bow - " << type << endl;
+							}
+					};
 		};
-	void dead_archer (const Archer &name) // РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РґСЂСѓР¶РµСЃС‚РІРµРЅРЅРѕР№ С„СѓРЅРєС†РёРё
+	class crossbowman : public archer // наследник класса лучник - арбалетчик
+		{
+			private:
+				int tension_force_of_crossbow;
+				bool alive;
+			public:
+				crossbowman(int hitpoints, int manapoints, int damage, int defence) : archer(hitpoints, manapoints, damage, defence) // конструктор класса archer
+					{
+						alive =1;
+					}
+				crossbowman(string color_of_cloak, int number_of_cloak) : archer(color_of_cloak, number_of_cloak) // конструктор класса archer
+					{
+						alive = 1;
+					}
+				~crossbowman() // деструктор класса
+					{
+						cout << "(*)\n";
+					}
+				void tension_force () // виртуальный метод класса archer
+					{
+						cout << "Primary tension force of crossbow: " << tension_force_of_crossbow << "N\n";
+					}
+		};
+	const string archer::name[NAMESIZE] = {"Shiro", "Robin", "Parys"}; // инициализация статического компонента - имён лучников
+	void dead_archer (const archer &name) // инициализация дружественной функции
 		{
 			cout << "\n\t\t\t\t  The lifetime of the archer is over. Archer is dead. You characteristics:\n\t\t\t\tHP: " << name.hitpoints 
 			     << "\n\t\t\t\tMP: " << name.manapoints << "\n\t\t\t\tDMG: " << name.damage << "\n\t\t\t\tDEF: " << name.defence << endl;
-		}
-	const string Archer::name[NAMESIZE] = {"Shiro", "Robin", "Parys"}; // РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃС‚Р°С‚РёС‡РµСЃРєРѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р° - РёРјС‘РЅ Р»СѓС‡РЅРёРєРѕРІ
+		}	
 	#endif
