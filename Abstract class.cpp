@@ -26,6 +26,6 @@ using namespace std;
 			crossbowman Robin;
 			Robin.aim(5.0, 1.0);
 			archer *a = &Robin;
-			cout << p->shoots_per_minute();
+			cout << a->shoots_per_minute();
 			return 0;
 		}
