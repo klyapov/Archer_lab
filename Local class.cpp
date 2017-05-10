@@ -4,7 +4,7 @@
 	void find_range()
 		{
 			cout << "Range Your bow: " << ::supposed_range << " meters\n";
-			class bow // ëîêàëüíûé êëàññ
+			class bow // Ð»Ð¾ÐºÐ°Ð»ÑŒÐ½Ñ‹Ð¹ ÐºÐ»Ð°ÑÑ
 				{
 						double real_range;
 					public:
