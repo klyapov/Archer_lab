@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-	class archer // абстрактный класс
+	class archer // Р°Р±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ
 		{
 			protected:
 				double first_aim;
@@ -11,12 +11,12 @@ using namespace std;
 						this -> first_aim = first_aim;
 						this -> second_aim = second_aim;
 					}
-				virtual double shoots_per_minute () = 0; // чисто виртуальная функция, интерфейс
+				virtual double shoots_per_minute () = 0; // С‡РёСЃС‚Рѕ РІРёСЂС‚СѓР°Р»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ, РёРЅС‚РµСЂС„РµР№СЃ
 		};
-	class crossbowman : public archer // наследник класса archer
+	class crossbowman : public archer // РЅР°СЃР»РµРґРЅРёРє РєР»Р°СЃСЃР° archer
 		{
 			public:
-				double shoots_per_minute ()  // виртуальный метод
+				double shoots_per_minute ()  // РІРёСЂС‚СѓР°Р»СЊРЅС‹Р№ РјРµС‚РѕРґ
 						{
 							return (first_aim + second_aim)/60;
 						}
@@ -26,6 +26,6 @@ using namespace std;
 			crossbowman Robin;
 			Robin.aim(5.0, 1.0);
 			archer *a = &Robin;
-			cout << p->shoots_per_minute();
+			cout << a->shoots_per_minute();
 			return 0;
 		}
