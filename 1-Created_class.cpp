@@ -42,7 +42,7 @@
 	class crossbowman : public archer // наследник класса archer
 		{
 			private:
-				int tension_force_of_crossbow;
+				static const int tension_force_of_crossbow = 15;
 				bool alive;
 			public:
 				crossbowman(int hitpoints, int manapoints, int damage, int defence) : archer(hitpoints, manapoints, damage, defence) // конструктор класса archer
